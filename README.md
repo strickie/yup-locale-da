@@ -1,6 +1,6 @@
-# German Translation of Yup Messages
+# Danish Translation of Yup Messages
 
-This repository contains a single JavaScript file which exports German versions for [Yup](https://github.com/jquense/yup) validation messages. (Only mixed.notType hasn't been translated as it would need a helper method that is not publicly exported by Yup.)
+This repository contains a single JavaScript file which exports Danish versions for [Yup](https://github.com/jquense/yup) validation messages. (Only mixed.notType hasn't been translated as it would need a helper method that is not publicly exported by Yup.)
 
 Another approach to localization of Yup messages would be to change the default messages to translation property keys and do the translation in the "UI part" of your app. See this [Yup issue discussion](https://github.com/jquense/yup/issues/71) for details.
 
@@ -12,9 +12,9 @@ Make sure to set your localized messages before any other calls to Yup, see [yup
 
 ```javascript
 import * as yup from 'yup';
-import yupLocaleDe from 'yup-locale-de';
+import yupLocaleDa from 'yup-locale-da';
 
-yup.setLocale(yupLocaleDe);
+yup.setLocale(yupLocaleDa);
 
 // Now use Yup schemas AFTER you defined your custom dictionary
 const schema = yup.object().shape({

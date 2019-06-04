@@ -1,16 +1,16 @@
 {
-  "name": "yup-locale-de",
-  "version": "0.26.2",
-  "description": "German translation for default yup messages",
-  "main": "localeDE.js",
+  "name": "yup-locale-da",
+  "version": "0.1.0",
+  "description": "Danish translation for default yup messages",
+  "main": "localeDA.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/skress/yup-locale-de.git"
+    "url": "git+https://github.com/strickie/yup-locale-da.git"
   },
-  "author": "Sören Kress",
+  "author": "Rickie Sonqvist",
   "license": "Unlicense",
   "bugs": {
-    "url": "https://github.com/skress/yup-locale-de/issues"
+    "url": "https://github.com/strickie/yup-locale-da/issues"
   },
-  "homepage": "https://github.com/skress/yup-locale-de#readme"
+  "homepage": "https://github.com/strickie/yup-locale-da#readme"
 }
