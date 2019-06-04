@@ -22,3 +22,4 @@ const schema = yup.object().shape({
   age: yup.number().min(18),
 });
 ```
+NOTE: Translated copy of https://github.com/skress/yup-locale-de
