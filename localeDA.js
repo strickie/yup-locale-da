@@ -1,11 +1,11 @@
-export let mixed = {
+module.exports.mixed = {
   default: '${path} er ugyldig',
   required: '${path} er et påkrævet felt',
   oneOf: '${path} skal være en af følgende værdier: ${values}',
   notOneOf: '${path} må ikke være en af følgende værdier: ${values}',
 };
 
-export let string = {
+module.exports.string = {
   length: '${path} skal være præcist ${length} tegn lang',
   min: '${path} skal være mindst ${min} tegn lang',
   max: '${path} må højst være  ${max} tegn lang',
@@ -17,7 +17,7 @@ export let string = {
   uppercase: '${path} må kun indeholde af stove bogstaver',
 };
 
-export let number = {
+module.exports.number = {
   min: '${path} skal være større eller lig med ${min}',
   max: '${path} skal være mindre eller lig med ${max}',
   lessThan: '${path} skal være mindre end ${less}',
@@ -28,28 +28,28 @@ export let number = {
   integer: '${path} skal være et tal',
 };
 
-export let date = {
+module.exports.date = {
   min: '${path} skal være senere end ${min}',
   max: '${path} skal være før end ${max}',
 };
 
-export let boolean = {};
+module.exports.boolean = {};
 
-export let object = {
+module.exports.object = {
   noUnknown: '${path}-feltet må ikke have nøgler, der ikke er defineret i "Objekt-Shape"',
 };
 
-export let array = {
+module.exports.array = {
   min: '${path}-feltet skal indeholde mindst ${min} elementer',
   max: '${path}-feltet skal have færre end eller lig med ${max} elementer',
 };
 
-export default {
-  mixed,
-  string,
-  number,
-  date,
-  object,
-  array,
-  boolean,
+module.exports = {
+  mixed: module.exports.mixed,
+  string: module.exports.string,
+  number: module.exports.number,
+  date: module.exports.date,
+  object: module.exports.object,
+  array: module.exports.array,
+  boolean: module.exports.boolean,
 };
