@@ -1,8 +1,33 @@
+const printValue = require('yup/lib/util/printValue');
+
 module.exports.mixed = {
   default: '${path} er ugyldig',
   required: '${path} er et påkrævet felt',
   oneOf: '${path} skal være en af følgende værdier: ${values}',
   notOneOf: '${path} må ikke være en af følgende værdier: ${values}',
+  notType: ({ path, type, value, originalValue }) => {
+    const castMsg =
+        originalValue != null && originalValue !== value
+            ? ` (ændret fra værdien \`${printValue(
+                  originalValue,
+                  true
+              )}\`).`
+            : ".";
+
+    return type !== "mixed"
+        ? `${path} skal være af typen \`${type}\`, ` +
+              `men den endelige værdi var: \`${printValue(
+                  value,
+                  true
+              )}\`` +
+              castMsg
+        : `${path} skal passe til den konfigurerede type. ` +
+              `Den validerede værdi var: \`${printValue(
+                  value,
+                  true
+              )}\`` +
+              castMsg;
+  },
 };
 
 module.exports.string = {
